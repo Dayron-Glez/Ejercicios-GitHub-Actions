@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola mundo"
+      - name: Action
+        uses: actions/checkout@v4
+        with:
+          hola: 12
 
   second_job:
     runs-on: ubuntu-latest
