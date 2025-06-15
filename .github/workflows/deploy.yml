@@ -12,7 +12,7 @@ jobs:
 
   second_job:
     runs-on: ubuntu-latest
-0
+
     steps:
       - name: Hola Mundo
         run: echo "Hola mundo"
