@@ -21,7 +21,6 @@ jobs:
         run: echo "Hola ${{github.actor}}"
   third_job:
     runs-on: ubuntu-latest
-    needs: second_job
     steps:
       - name: Mostrar varaible de entorno
         run: echo "Hola $Name"
