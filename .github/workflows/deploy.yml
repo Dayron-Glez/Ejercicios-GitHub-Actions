@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           hola: 12
+      - name: Github Output
+        run: echo $GITHUB_OUTPUT
 
   second_job:
     runs-on: ubuntu-latest
