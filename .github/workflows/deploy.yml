@@ -30,4 +30,4 @@ jobs:
     needs: second_job
     steps:
       - name: Utilizar la action de code factor
-        uses: codefactor/Codefactor
+        uses: codefactor-io/Codefactor
