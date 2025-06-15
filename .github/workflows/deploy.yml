@@ -15,4 +15,4 @@ jobs:
     needs: first_job
     steps:
       - name: Hola Mundo
-        run: echo "Hola mundo"
+        run: echo "Hola ${{github.actor}}"
