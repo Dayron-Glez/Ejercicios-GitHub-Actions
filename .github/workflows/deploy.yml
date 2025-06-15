@@ -6,6 +6,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
 
+    env:
+      NAME: MiVariableDeEntorno
+
     steps:
       - name: Hola Mundo
         run: echo "Hola mundo"
@@ -14,5 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: first_job
     steps:
-      - name: Hola Mundo
+      - name: Hola Autor del commit
         run: echo "Hola ${{github.actor}}"
+  third_job:
+    runs-on: ubuntu-latest
+    needs: second_job
+    steps:
+      - name: Mostrar varaible de entorno
+        run: echo "Hola $Name"
