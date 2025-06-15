@@ -11,13 +11,16 @@ jobs:
 
     steps:
       - name: Hola Mundo
+        id: step_1
         run: echo "Hola mundo"
       - name: Action
         uses: actions/checkout@v4
         with:
           hola: 12
       - name: Github Output
-        run: echo $GITHUB_OUTPUT
+        run: echo "my_variable=Hola Mundo desde variable" >> $GITHUB_OUTPUT
+      - name: Obtener mensaje
+        run: echo "${{steps.step_1.outputs.my_variable}}"
 
   second_job:
     runs-on: ubuntu-latest
